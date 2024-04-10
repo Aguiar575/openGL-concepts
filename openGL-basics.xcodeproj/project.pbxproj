@@ -12,6 +12,8 @@
 		237D47842BBA17F900D3FA42 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 237D47832BBA17F900D3FA42 /* libGLEW.2.2.0.dylib */; };
 		237D47852BBA17F900D3FA42 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 237D47832BBA17F900D3FA42 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		237D47872BBA185700D3FA42 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237D47862BBA185700D3FA42 /* OpenGL.framework */; };
+		239574A72BC61E0A00DC13C4 /* libglm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 239574A62BC61E0A00DC13C4 /* libglm.dylib */; };
+		239574A82BC61E0A00DC13C4 /* libglm.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 239574A62BC61E0A00DC13C4 /* libglm.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		23A8DA9D2BB8F92C00B78312 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23A8DA9C2BB8F92C00B78312 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				237D47812BBA17E000D3FA42 /* libglfw.3.4.dylib in Embed Libraries */,
+				239574A82BC61E0A00DC13C4 /* libglm.dylib in Embed Libraries */,
 				237D47852BBA17F900D3FA42 /* libGLEW.2.2.0.dylib in Embed Libraries */,
 			);
 			name = "Embed Libraries";
@@ -43,6 +46,7 @@
 		237D477F2BBA17E000D3FA42 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
 		237D47832BBA17F900D3FA42 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 		237D47862BBA185700D3FA42 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		239574A62BC61E0A00DC13C4 /* libglm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglm.dylib; path = ../../../../opt/homebrew/Cellar/glm/1.0.1/lib/libglm.dylib; sourceTree = "<group>"; };
 		23A8DA992BB8F92C00B78312 /* openGL-basics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "openGL-basics"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A8DA9C2BB8F92C00B78312 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				237D47802BBA17E000D3FA42 /* libglfw.3.4.dylib in Frameworks */,
+				239574A72BC61E0A00DC13C4 /* libglm.dylib in Frameworks */,
 				237D47842BBA17F900D3FA42 /* libGLEW.2.2.0.dylib in Frameworks */,
 				237D47872BBA185700D3FA42 /* OpenGL.framework in Frameworks */,
 			);
@@ -64,6 +69,7 @@
 		237D84B72BB9E8CF00CD78BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				239574A62BC61E0A00DC13C4 /* libglm.dylib */,
 				237D47862BBA185700D3FA42 /* OpenGL.framework */,
 				237D47832BBA17F900D3FA42 /* libGLEW.2.2.0.dylib */,
 				237D477F2BBA17E000D3FA42 /* libglfw.3.4.dylib */,
@@ -283,11 +289,14 @@
 				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"/opt/homebrew/Cellar/glew/2.2.0_1/include/**",
 					"/opt/homebrew/Cellar/glfw/3.4/include/**",
+					"/opt/homebrew/Cellar/glm/1.0.1/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
 					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/Cellar/glm/1.0.1/lib,
+					/opt/homebrew/Cellar/glm/1.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -298,13 +307,16 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				"HEADER_SEARCH_PATHS[arch=*]" = (
-					/opt/homebrew/Cellar/glew/2.2.0_1/include,
+					"/opt/homebrew/Cellar/glew/2.2.0_1/include/**",
 					"/opt/homebrew/Cellar/glfw/3.4/include/**",
+					"/opt/homebrew/Cellar/glm/1.0.1/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
 					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/Cellar/glm/1.0.1/lib,
+					/opt/homebrew/Cellar/glm/1.0.1/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
