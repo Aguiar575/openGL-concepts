@@ -57,7 +57,6 @@
 		231FCAE52BC8CD6C009321AF /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
 		231FCAE82BC8D18D009321AF /* shader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		231FCAEB2BC8D1CE009321AF /* shader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
-		2365FDA02BCCB23200F8A2CA /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		2379E2742BCCB07D0037C499 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		2379E2752BCCB07D0037C499 /* Camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
 		237D477F2BBA17E000D3FA42 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
@@ -90,7 +89,6 @@
 				231FCAE52BC8CD6C009321AF /* Window.hpp */,
 				231FCAE22BC8CCC6009321AF /* Mesh.hpp */,
 				231FCADE2BC8C955009321AF /* Shader.hpp */,
-				2365FDA02BCCB23200F8A2CA /* stb_image.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
